@@ -1,0 +1,6 @@
+<h1>Create a New Book</h1>
+<%= simple_form_for @book do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.submit "Add Book", class: "btn btn-primary" %>
+<% end %>
