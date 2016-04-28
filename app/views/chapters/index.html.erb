@@ -1,0 +1,6 @@
+<h1><%= @book.title %></h1>  
+<% @chapters.each do |chapter| %>
+  <h3><%= link_to chapter.title, book_chapter_path(@book, chapter) %></h3>  
+<% end %>
+<%= link_to "Add Chapter", new_book_chapter_path(@book), class: "btn btn-primary" %>
+

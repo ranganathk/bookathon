@@ -1,0 +1,6 @@
+<h1><%= link_to @book.title, book_path(@book) %></h1>
+<h2><%= link_to @chapter.title, book_chapter_path(@book, @chapter) %></h2>
+<h4><%= @section.title %></h4>
+<p><%= @section.content %></p>
+<%= link_to "Edit Section", edit_book_chapter_section_path(@book, @chapter, @section), class: "btn btn-primary" %>
+<%= link_to "Delete Section", book_chapter_section_path(@book, @chapter, @section), method: :delete, class: "btn btn-primary", data: { confirm: 'Are you sure you want to delete this section.' } %>

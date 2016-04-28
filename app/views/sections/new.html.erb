@@ -1,0 +1,6 @@
+<h2>Please add a section to the book : <%= @book.title %>, in the chapter <%= @chapter.title %>.</h2>
+<%= simple_form_for [@book, @chapter, @section] do |f| %>
+  <%= f.input :title %>
+  <%= f.input :content %>
+  <%= f.submit "Add Section", class:"btn btn-primary" %>
+<% end %>
